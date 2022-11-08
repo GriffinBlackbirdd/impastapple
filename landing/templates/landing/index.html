@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Since you like Apple so much</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/apple.css' %}">
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <ul class="desktop-nav">
+                <li><a href="#" class="link-logo"></a></li>
+                <li><a href="#">sInCe</a></li>
+                <li><a href="#">yOu</a></li>
+                <li><a href="#">LiKe</a></li>
+                <li><a href="#">aPplE</a></li>
+                <li><a href="#">sO</a></li>
+                <li><a href="#">mUcH</a></li>
+                <li><a href="#" class="link-search"></a></li>
+                <li>
+                    <a href="#" class="link-bag"></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-container hide">
+            <div class="link-search"></div>
+            <div class="search-bar">
+                <form accept="">
+                    <input type="text" placeholder="Search Apple.com">
+                </form>
+            </div>
+            <div class="link-close"></div>
+
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li>
+                        <a href="{% url 'thoughts' %}">arreyAn calling?</a>
+                    </li>
+                    <li>
+                        <a href="#">Still in MAKING OK! might make some music player?</a>
+                    </li>
+                    <li>
+                        <a href="#">I LOVE YOU SO VERY MUCH</a>
+                    </li>
+                    <li>
+                        <a href="#">sdbfjkcbhs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="hero iphone-14-pro">
+        <div class="container">
+            <div class="title">
+                <h2 class="title-heading">iLoveU 14 Pro</h2>
+                <h3 class="title-sub-heading">Pro beauty. Pro love.</h3>
+                <p class="title-price">From $12/may to $8/11 and still count-ing.*</p>
+            </div>
+            <div class="cta">
+                <a href="#" class="cta-link">Learn More</a>
+                <a href="#" class="cta-link">Buy</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="hero iphone-14">
+        <div class="container">
+            <div class="title title-dark">
+                <h2 class="title-heading">iLoveU 14</h2>
+                <h3 class="title-sub-headingg">Did it hurt when you fell from iCloud? ;)</h3>
+                <p class="title-price">From $16.62/mo or $399 with trade-in.*</p>
+            </div>
+            <div class="cta">
+                <a href="#" class="cta-link cta-link-darker">Learn More</a>
+                <a href="#" class="cta-link cta-link-darker">Buy</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="hero watch">
+        <div class="container">
+            <div class="title title-dark">
+                <h2 class="title-heading-watch"></h2>
+                <h3 class="title-sub-headinggg">Can I be your apple watch? <br>
+                Cause I want to hold those wrists and pin you to the wall ;)</h3>
+                
+            </div>
+            <div class="cta">
+                <a href="#" class="cta-link cta-link-darker">Learn More</a>
+                <a href="#" class="cta-link cta-link-darker">Buy</a>
+            </div>
+        </div>
+    </section>
+    <section class="hero imgBox">
+            <img align="right" src={% static "images/hero/iphone-11-pro/heart.png" %} width="800px" height="600px">
+        <div class="container">
+                <div class="text-content">
+                    <h2>This is not an Apple theme,<br>this is Apple bottom jeans!</h2>
+                    <h2 class="post"><span class="typing-text"></span></h2>
+                </div>
+               
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+            <script>
+                var type = new Typed('.typing-text',{
+                    strings : [ 'Apple bottom jeans..','Boots with the fur...nah kidding.','I want you without jeans ;)','It really hurts how perfect you are.', 'I hope this cOnvEyS my love for you.', 'Lets get married.', 'I bet you cannot show this last page to anyone ROFL.' ],
+                    typeSpeed: 100,
+                    loop:true
+                });
+                let themeColor = document.querySelectorAll('.theme-toggler span');
+                themeColor.forEach(color => color.addEventListener('click', () =>{
+                    let background = color.style.background;
+                    document.querySelector('body').style.background = background;
+                }));
+            </script>
+        </div>
+    </section>
+
+
+    <div class="overlay"></div>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
